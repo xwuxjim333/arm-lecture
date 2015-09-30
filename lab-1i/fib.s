@@ -17,8 +17,7 @@ fibonacci:
 	mov r4, #1	@ r4 = F(n-1)
 	mov r5, #0	@ r5 = F(n)
 	mov r6, r0	@ r6 = i
-
-	@ END CODE MODIFICATION
+	
 .loop:
 	add r5, r3, r4	@ F(n) = F(n-2)+F(n-1)
 	mov r3, r4	@ F(n-2) = F(n-1)
@@ -29,5 +28,6 @@ fibonacci:
 	mov r0, r5
 	pop {r3, r4, r5, r6, pc}
 
+	@ END CODE MODIFICATION
 	.size fibonacci, .-fibonacci
 	.end
